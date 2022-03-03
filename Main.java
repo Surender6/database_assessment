@@ -5,8 +5,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 class Main{
-	private static String databasePath = "jdbc:sqlite:MoviesDatabase.db";
-
+	
 	public static void main(String[] args){
 		Connection connect = null;
 
@@ -16,7 +15,7 @@ class Main{
     Picture agnathavasi = new Picture("agnathavasi ","Pawan kalyan ","trivikram",2018);
 		
 		try {
-			connect = DriverManager.getConnection(databasePath);
+			connect = DriverManager.getConnection("jdbc:sqlite:MoviesDatabase.db");
 			Statement statement = connect.createStatement();
 			statement.setQueryTimeout(30);
 
