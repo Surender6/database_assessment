@@ -31,7 +31,7 @@ class Main{
 			ResultSet resultset = SqHandler.getMovies(statement);
       System.out.println("");
 			System.out.println("PictureName	|	PictureActor	|	PictureDirector	|	PictureYear	");
-			System.out.println("========================================================================");
+			System.out.println("=======================================================================");
 			if(resultset != null){
 				while(resultset.next()){
 					Picture picture = SqHandler.fatchMovie(resultset);
